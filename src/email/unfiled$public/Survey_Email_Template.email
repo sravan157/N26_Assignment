@@ -1,0 +1,5 @@
+<messaging:emailTemplate subject="N26 Survey" recipientType="Contact" relatedToType="Contact" language="{!relatedTo.Language__c}">
+<messaging:plainTextEmailBody >
+Hey {!relatedTo.FirstName}, {!$Label.Survey_Email_Body} http://n26.com/survey/{!relatedTo.id}
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

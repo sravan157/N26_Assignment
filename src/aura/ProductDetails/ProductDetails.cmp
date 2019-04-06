@@ -1,0 +1,86 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global" controller="ProductDetails"> 
+    
+    <aura:attribute name="productDetails" type="Feature__c"/>
+    <aura:attribute name="isProduct" type="boolean" default = "false"/>
+    <aura:attribute name="costCalenderIsText" type="boolean" default = "false"/>
+    <aura:attribute name="atmIsText" type="boolean" default = "false"/>
+    <aura:attribute name="currencySymbol" type="String"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:card class="slds-container_center slds-theme_shade slds-card slds-card_boundary" title="Product Details" iconName="custom:custom40" variant="base">
+        <aura:if isTrue="{!v.isProduct}">
+            <div class="slds-card__body_inner">
+                <ul class="slds-has-dividers_bottom-space">
+                    <li class="slds-item">
+                        <lightning:layout horizontalAlign="spread" verticalAlign="center">
+                            <lightning:layoutItem>
+                                <div class="slds-text-title slds-text-color_default">{!$Label.c.product_name}</div>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem>
+                                <div class="slds-text-title slds-text-color_weak">
+                                    {!v.productDetails.Name}
+                                </div>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </li>
+                    <li class="slds-item">
+                        <lightning:layout horizontalAlign="spread" verticalAlign="center">
+                            <lightning:layoutItem>
+                                <div class="slds-text-title slds-text-color_default">{!$Label.c.cost_per_calendar_month}</div>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem>
+                                <div class="slds-text-title slds-text-color_weak">
+                                    <aura:if isTrue="{!v.costCalenderIsText}">
+                                        {!v.productDetails.Cost_per_Calendar_Month__c}
+                                        <aura:set attribute="else">
+                                            <lightning:formattedNumber value="{!v.productDetails.Cost_per_Calendar_Month__c}" style="currency" currencyCode="{!v.productDetails.CurrencyIsoCode}"/>
+                                        </aura:set>
+                                    </aura:if>
+                                </div>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </li>
+                    <li class="slds-item">
+                        <lightning:layout horizontalAlign="spread" verticalAlign="center">
+                            <lightning:layoutItem>
+                                <div class="slds-text-title slds-text-color_default">{!$Label.c.atm_fees}</div>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem>
+                                <div class="slds-text-title slds-text-color_weak">
+                                    <aura:if isTrue="{!v.atmIsText}">
+                                        	{!v.productDetails.ATM_Fee_in_other_currencies__c}
+                                        <aura:set attribute="else">
+                                            <lightning:formattedNumber value="{!v.productDetails.ATM_Fee_in_other_currencies__c}" style="percent" maximumFractionDigits="2"/> 
+                                        </aura:set>
+                                    </aura:if>
+                                </div>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </li>
+                    <li class="slds-item">
+                        <lightning:layout horizontalAlign="spread" verticalAlign="center">
+                            <lightning:layoutItem>
+                                <div class="slds-text-title slds-text-color_default">{!$Label.c.Card_Replacement_Cost}</div>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem>
+                                <div class="slds-text-title slds-text-color_weak"> 
+                                    <lightning:formattedNumber value="{!v.productDetails.Card_Replacement_Cost__c}" style="currency" currencyCode="{!v.productDetails.CurrencyIsoCode}"/>
+                                </div>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </li>
+                </ul>
+            </div>
+            <aura:set attribute="else">
+                <div class="slds-card__body_inner">
+                    <lightning:layout horizontalAlign="spread" verticalAlign="center">
+                        <lightning:layoutItem>
+                            <div class="slds-text-title slds-text-color_default">{!$Label.c.product_not_selected}</div>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </div>
+            </aura:set>
+        </aura:if> 
+    </lightning:card>
+</aura:component>

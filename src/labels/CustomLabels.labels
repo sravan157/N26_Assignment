@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Card_Replacement_Cost</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>replacement_cost</shortDescription>
+        <value>Card Replacement Cost</value>
+    </labels>
+    <labels>
+        <fullName>Survey_Email_Body</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Survey Email Body</shortDescription>
+        <value>please fill out our survey:</value>
+    </labels>
+    <labels>
+        <fullName>atm_fees</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>atm_fees</shortDescription>
+        <value>ATM Fee in other currencies</value>
+    </labels>
+    <labels>
+        <fullName>cost_per_calendar_month</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>cost_per_calendar_month</shortDescription>
+        <value>Cost per Calendar Month</value>
+    </labels>
+    <labels>
+        <fullName>product_name</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>product_name</shortDescription>
+        <value>Product</value>
+    </labels>
+    <labels>
+        <fullName>product_not_selected</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>product_not_selected</shortDescription>
+        <value>Product or home country of contact is not present</value>
+    </labels>
+</CustomLabels>

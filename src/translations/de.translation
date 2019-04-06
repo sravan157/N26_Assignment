@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label><!-- replacement_cost --></label>
+        <name>Card_Replacement_Cost</name>
+    </customLabels>
+    <customLabels>
+        <label>bitte fülle unsere Umfrage aus:</label>
+        <name>Survey_Email_Body</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- atm_fees --></label>
+        <name>atm_fees</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- cost_per_calendar_month --></label>
+        <name>cost_per_calendar_month</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- product_name --></label>
+        <name>product_name</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- product_not_selected --></label>
+        <name>product_not_selected</name>
+    </customLabels>
+</Translations>
