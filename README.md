@@ -4,17 +4,7 @@ Multicurrency is enabled for GBP and EUR
 
 Translation workbench is enabled for DE and EN
 
-URL: 
-Login.salesforce.com 
 
-UserName: 
-sravan@n26.com 
-
-Password: 
-Test@123 
-
-Security Token: 
-SPmKf72cCyWy6IhB82g7Lr5i
 
 
 Custom Fields:
